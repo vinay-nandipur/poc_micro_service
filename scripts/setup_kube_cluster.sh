@@ -32,7 +32,7 @@ fi
 
 kind_status=$(kind version 2>&1)
 
-if [[ "$kind_status" == *"darwin/amd64"* ]]
+if [[ "$kind_status" == *"darwin/amd64"* ]] || [[ "$kind_status" == *"linux/amd64"* ]]
 then
   tput setaf 2; echo "====================Kind Tool Installation Completed!===================="
 else
