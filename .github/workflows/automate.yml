@@ -30,7 +30,7 @@ jobs:
         run: bash ./scripts/setup_kube_cluster.sh
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Remove Kube Cluster
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          bash ./scripts/setup_kube_cluster.sh
+          tput setaf 2; echo "====================Kind Kubernetes Cluster Removed!===================="
