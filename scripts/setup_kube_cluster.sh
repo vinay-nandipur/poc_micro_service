@@ -27,7 +27,7 @@ then
 else
   curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.14.0/kind-linux-amd64
   chmod +x ./kind
-  mv ./kind /usr/bin/kind
+  sudo mv ./kind /usr/bin/kind
 fi
 
 kind_status=$(kind version 2>&1)
