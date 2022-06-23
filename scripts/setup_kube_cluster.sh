@@ -21,11 +21,11 @@ os_type=$(uname -a 2>&1)
 
 if [[ "$os_type" == *"Darwin"* ]]
 then
-  curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.11.1/kind-darwin-amd64
+  curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.14.0/kind-darwin-amd64
   chmod +x ./kind
   sudo mv ./kind /usr/local/bin/kind
 else
-  curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.11.1/kind-linux-amd64
+  curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.14.0/kind-linux-amd64
   chmod +x ./kind
   mv ./kind /usr/bin/kind
 fi
