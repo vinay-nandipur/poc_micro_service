@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if ! kind delete cluster --name kind
+if kind delete cluster --name kind
 then
   tput setaf 2; echo "====================Deleted Kube Cluster!===================="
 else
