@@ -33,6 +33,10 @@ jobs:
       - name: Install|Update Fluxctl
         run: bash ./scripts/install_flux_ctl.sh
 
+      # Configure gh cli
+      - name: Configure gh cli
+        run: bash ./scripts/install_configure_gh_cli.sh
+
       # Remove Kube Cluster
       - name: Remove Kube Cluster
         run: |
