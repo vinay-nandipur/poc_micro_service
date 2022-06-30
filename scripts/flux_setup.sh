@@ -10,9 +10,17 @@
 } &> /dev/null 2>&1
 
 flux bootstrap github \
-    --context=staging \
+    --context=kind-staging \
     --owner=${GITHUB_USER} \
     --repository=${GITHUB_REPO} \
     --branch=main \
     --personal \
     --path=clusters/staging
+
+flux bootstrap github \
+    --context=kind-production \
+    --owner=${GITHUB_USER} \
+    --repository=${GITHUB_REPO} \
+    --branch=main \
+    --personal \
+    --path=clusters/production
