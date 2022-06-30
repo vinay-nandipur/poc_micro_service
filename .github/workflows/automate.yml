@@ -34,7 +34,7 @@ jobs:
         run: bash ./scripts/install_flux.sh
 
       # Configure gh cli
-      - name: Configure GH cli
+      - name: Configure GH CLI
         run: bash ./scripts/install_configure_gh_cli.sh
 
       # Setup flux

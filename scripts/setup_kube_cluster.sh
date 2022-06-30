@@ -42,7 +42,8 @@ fi
 
 tput setaf 6; echo "====================Creating Kind Kubernetes Cluster...===================="
 
-kind create cluster --config $directory_path/../configs/multi-node.yaml
+kind create cluster --config $directory_path/../configs/staging.yaml
+kind create cluster --config $directory_path/../configs/production.yaml
 
 cluster_status=$(kind get clusters 2>&1)
 
