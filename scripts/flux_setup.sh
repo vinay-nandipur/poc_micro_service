@@ -17,10 +17,10 @@ flux bootstrap github \
     --personal \
     --path=clusters/staging
 
-flux bootstrap github \
-    --context=kind-production \
-    --owner=${GITHUB_USER} \
-    --repository=${GITHUB_REPO} \
-    --branch=main \
-    --personal \
-    --path=clusters/production
+# flux bootstrap github \
+#     --context=kind-production \
+#     --owner=${GITHUB_USER} \
+#     --repository=${GITHUB_REPO} \
+#     --branch=main \
+#     --personal \
+#     --path=clusters/production
