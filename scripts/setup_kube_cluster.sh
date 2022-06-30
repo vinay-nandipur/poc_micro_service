@@ -17,6 +17,8 @@ directory_path="$(get_script_dir)"
 
 tput setaf 6; echo "====================Installing Kind Tool...===================="
 
+docker pull kindest/node:v1.24.2
+
 os_type=$(uname -a 2>&1)
 
 if [[ "$os_type" == *"Darwin"* ]]
@@ -42,8 +44,8 @@ fi
 
 tput setaf 6; echo "====================Creating Kind Kubernetes Cluster...===================="
 
-kind create cluster --config $directory_path/../configs/staging.yaml
-kind create cluster --config $directory_path/../configs/production.yaml
+kind create cluster --config $directory_path/../configs/staging.yaml --image kindest/node:v1.24.2 --name staging
+kind create cluster --config $directory_path/../configs/production.yaml --image kindest/node:v1.24.2 --name production
 
 cluster_status=$(kind get clusters 2>&1)
 
