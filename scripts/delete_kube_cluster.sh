@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if kind delete cluster --name kind-staging && kind delete cluster --name kind-production
+if kind delete clusters --all
 then
   tput setaf 2; echo "====================Deleted Kube Cluster!===================="
 else
