@@ -30,15 +30,19 @@ jobs:
         run: bash ./scripts/setup_kube_cluster.sh
 
       # Install|Update Fluxctl
-      - name: Install|Update Fluxctl
-        run: bash ./scripts/install_flux_ctl.sh
+      - name: Install|Update Flux
+        run: bash ./scripts/install_flux.sh
 
       # Configure gh cli
-      - name: Configure gh cli
+      - name: Configure GH cli
         run: bash ./scripts/install_configure_gh_cli.sh
 
-      # Remove Kube Cluster
-      - name: Remove Kube Cluster
-        run: |
-          bash ./scripts/delete_kube_cluster.sh
-          tput setaf 2; echo "====================Kind Kubernetes Cluster Removed!===================="
+      # Setup flux
+      - name: Setup flux
+        run: bash ./scripts/flux_setup.sh
+
+      # # Remove Kube Cluster
+      # - name: Remove Kube Cluster
+      #   run: |
+      #     bash ./scripts/delete_kube_cluster.sh
+      #     tput setaf 2; echo "====================Kind Kubernetes Cluster Removed!===================="
