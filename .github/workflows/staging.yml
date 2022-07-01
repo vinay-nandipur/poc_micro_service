@@ -29,17 +29,21 @@ jobs:
       - name: Setup Kube Cluster & Pre-Reqs
         run: bash ./scripts/staging_setup_kube_cluster.sh
 
-      # Install|Update Fluxctl
+      # Install|Update Flux
       - name: Install|Update Flux
         run: bash ./scripts/install_flux.sh
 
-      # Configure gh cli
+      # Configure GH cli
       - name: Configure GH CLI
         run: bash ./scripts/install_configure_gh_cli.sh
 
-      # Setup flux
-      - name: Setup flux
+      # Setup Flux
+      - name: Setup Flux
         run: bash ./scripts/staging_flux_setup.sh
+
+      # Setup Sonarqube
+      - name: Setup Sonarqube
+        run: pushd ../docker ; docker-compose up ; popd
 
       # # Remove Kube Cluster
       # - name: Remove Kube Cluster
