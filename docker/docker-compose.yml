@@ -46,6 +46,8 @@ networks:
 volumes:
   sonarqube_data:
     name: sonarqube_data
+  sonarqube_conf:
+    name: sonarqube_conf
   sonarqube_extensions:
     name: sonarqube_extensions
   sonarqube_logs:

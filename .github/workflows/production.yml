@@ -43,7 +43,7 @@ jobs:
 
       # Setup Sonarqube
       - name: Setup Sonarqube
-        run: pushd ../docker ; docker-compose up ; popd
+        run: docker-compose -f ./docker/docker-compose.yml up
 
       # # Remove Kube Cluster
       # - name: Remove Kube Cluster
